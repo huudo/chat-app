@@ -22,6 +22,8 @@ window.Vue = require('vue');
 
 Vue.component('chat-component', require('./components/ChatComponent.vue').default);
 
+Vue.component('page-component', require('./components/page/PageComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -44,4 +46,7 @@ const app = new Vue({
             })
         }
     }
+});
+const app2 = new Vue({
+    el: '#page'
 });

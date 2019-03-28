@@ -28,4 +28,7 @@ class HomeController extends Controller
     public function getChat(){
         return view('chat');
     }
+    public function getPage(){
+        return view('page');
+    }
 }

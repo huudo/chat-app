@@ -16,7 +16,7 @@
 		  height: 100%;
 		}
 		body {
-		  background: linear-gradient(135deg, #044f48, #2a7561);
+		  background: #fff;
 		  background-size: cover;
 		  font-family: 'Open Sans', sans-serif;
 		  font-size: 14px;
@@ -26,9 +26,6 @@
 	</style>
 </head>
 <body>
-	<div id="app">
-		<chat-component></chat-component>
-	</div>
 	<div id="page">
 		<page-component></page-component>
 	</div>

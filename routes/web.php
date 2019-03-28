@@ -28,5 +28,11 @@ Route::group(['middleware' => ['auth']], function () {
 		'uses' => "UserController@getCurrentUser",
 		'as' => 'getUserLogin'
 	]);
+	Route::get('/page',[
+		'uses' => 'HomeController@getPage',
+		'as' => 'page'
+	]);
 	Route::resource('messages','MesssageController');
+	Route::resource('pages','PageController');
+	Route::resource('comments','CommentController');
 });
