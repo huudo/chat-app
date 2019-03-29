@@ -37,6 +37,7 @@
                 this.loadMessages()
                 Echo.channel('chatroom')
                 .listen('MessagePosted', (data) => {
+                    console.log("CÓ EVENT")
                     let message = data.message
                     message.user = data.user
                     this.listMessages.push(message)

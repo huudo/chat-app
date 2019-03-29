@@ -26,7 +26,7 @@
 	</style>
 </head>
 <body>
-	<div id="page">
+	<div id="app">
 		<page-component></page-component>
 	</div>
 	<script src="/js/app.js"></script>

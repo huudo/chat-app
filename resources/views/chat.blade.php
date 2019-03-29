@@ -29,9 +29,7 @@
 	<div id="app">
 		<chat-component></chat-component>
 	</div>
-	<div id="page">
-		<page-component></page-component>
-	</div>
+
 	<script src="/js/app.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Page;
+use Auth;
 class PageController extends Controller
 {
     /**
@@ -39,12 +40,12 @@ class PageController extends Controller
         $page = $user->pages()->create([
             'title' => request()->get('title'),
             'content' => request()->get('content')
-        ]);
+        ]); 
 
         //broadcast(new MessagePosted($message, $user))->toOthers();
 
         return response([
-            'status' => 'success'
+            'status' => 'success2'
         ], 200);
     }
 
