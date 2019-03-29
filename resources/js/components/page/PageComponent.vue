@@ -32,6 +32,7 @@
         data() {
             return {
                 page: {
+                    id : 0,
                     title: '',
                     content: ''
                 },
@@ -47,6 +48,7 @@
                 .then(response => {
                     console.log(response.data.status)
                     this.listPage.push({
+                        id : response.data.id_page,
                         title: this.page.title,
                         content: this.page.content,
                         created_at: new Date().toJSON().replace(/T|Z/gi, ' '),
@@ -73,5 +75,8 @@
     }
 </script>
 <style type="text/css">
-    
+    .page-list{
+        height: 600px;
+        overflow-y: scroll;
+    }
 </style>

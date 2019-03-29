@@ -15,7 +15,13 @@ class CommentController extends Controller
      */
     public function index(Request $request)
     {
-        return Comment::with('user')->get();
+        $user = Auth::user()->id;
+        $listUser = Comment::where('page_id','=',1)->pluck('user_id')->toArray();
+        
+        if(in_array($user,$listUser)){
+            return "RUN";
+        }
+        return "NOT RUN";
     }
 
     /**

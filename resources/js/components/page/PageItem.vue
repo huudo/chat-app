@@ -48,7 +48,7 @@
     created(){
       
       this.loadComments()
-      Echo.private('commentroom')
+      Echo.private('commentroom.'+this.page.id)
       .listen('CommentPosted', (data) => {
           console.log("CÓ EVENT")
           let comment = data.comment

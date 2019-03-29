@@ -45,7 +45,8 @@ class PageController extends Controller
         //broadcast(new MessagePosted($message, $user))->toOthers();
 
         return response([
-            'status' => 'success2'
+            'status' => 'success2',
+            'id_page' => $page->id
         ], 200);
     }
 
@@ -57,7 +58,7 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

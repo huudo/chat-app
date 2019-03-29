@@ -26,6 +26,7 @@ class CommentPosted implements ShouldBroadcast
 
     public function __construct(Comment $comment, User $user)
     {
+
         $this->comment = $comment;
         $this->user = $user;
     }
@@ -37,6 +38,6 @@ class CommentPosted implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('commentroom');
+        return new PrivateChannel('commentroom.'.$this->comment->page_id);
     }
 }
